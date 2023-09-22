@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: myapp
-  replicas: 31
+  replicas: 8
   template:
     metadata:
       labels:
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: sabair0509/hiring-app:31
+        image: sabair0509/hiring-app:5
         ports:
-        - containerPort: 310310
+        - containerPort: 8080
