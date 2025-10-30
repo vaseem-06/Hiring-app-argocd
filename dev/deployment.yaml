@@ -1,19 +1,20 @@
-apiVersion: apps/v15
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp
+  name: hiring-app
+  namespace: dev
 spec:
+  replicas: 2
   selector:
     matchLabels:
-      app: myapp
-  replicas: 15
+      app: hiring-app
   template:
     metadata:
       labels:
-        app: myapp
+        app: hiring-app
     spec:
       containers:
-      - name: myapp
-        image: sabair15/hiring-app:15
-        ports:
-        - containerPort: 15
+        - name: hiring-app
+          image: vaseem06/hiring-app:14   # ✅ Jenkins updates this tag
+          ports:
+            - containerPort: 8080
