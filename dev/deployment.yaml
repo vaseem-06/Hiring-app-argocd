@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: apps/v15
 kind: Deployment
 metadata:
   name: myapp
@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: myapp
-  replicas: 6
+  replicas: 15
   template:
     metadata:
       labels:
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: sabair03609/hiring-app:36
+        image: sabair15/hiring-app:15
         ports:
-        - containerPort: 8080
+        - containerPort: 15
